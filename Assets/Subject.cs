@@ -45,12 +45,15 @@ namespace ObserverDesignPattern
 
         public void NotifyObservers()
         {
-            Debug.Log("Now visible" + Visibility);
+            Debug.Log("Now visible: " + Visibility);
 
+            int i = 0;
             foreach (IObserver observer in observers)
             {
                 //By Calling the Update method, we are sending notifications to observers
+                Debug.Log("Observer " + i + " visibility changing to " + Visibility);
                 observer.UpdateVisibility(Visibility);
+                i++;
             }
         }
     }

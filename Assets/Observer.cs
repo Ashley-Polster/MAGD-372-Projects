@@ -7,9 +7,6 @@ namespace ObserverDesignPattern
     // Concrete Observer react to the updates issued by the Subject 
     public class Observer : MonoBehaviour, IObserver
     {
-        //The following Property is going to hold the observer's name
-        //public string UserName { get; set; }
-
         public GameObject observerObject;
 
         //Creating the Observer
@@ -33,7 +30,7 @@ namespace ObserverDesignPattern
         //Observer will get a notification from the Subject using the following Method
         public void UpdateVisibility(bool visibility)
         {
-            Debug.Log("Player is now visibile" + visibility);
+            Debug.Log("Notified observer that visibility is now " + visibility);
         }
     }
 }
