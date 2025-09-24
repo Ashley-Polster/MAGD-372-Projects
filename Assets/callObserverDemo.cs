@@ -22,7 +22,7 @@ namespace ObserverDesignPattern
 
             // Now the product is available
             mainSubject.SetVisibility(true);
-
+            observer1.UpdateVisibility(true);
             Debug.Log("mainSubject current state : " + mainSubject.GetVisibility());
 
             Console.Read();
